@@ -1,0 +1,12 @@
+{
+  "name": "neutron",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An Electron toolkit for apps.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tsarholdings/neutron.git"
+  },
+  "author": "Tsar Holding Company Pty Ltd",
+  "license": "MIT",
+}
