@@ -1,29 +1,18 @@
-import { INotification, NotificationState } from './Contracts'
+import { get } from 'lodash'
+import { INotification, NotificationState, INotificationOptions } from './Contracts'
 
 export default class Notification implements INotification {
-  readonly state: NotificationState
-  readonly message: string
-  readonly timestamp: Date
-  readonly options: {
-    buttons?: {
-      className?: string
-      text: string
-    }
-    description?: string
-    detail?: string
-    dismissable?: boolean
-    icon?: string
-  }
-  dismissed: boolean
-  displayed: boolean
+  timestamp = new Date
+  dismissed = false
+  displayed = false
+  defaultOptions = {}
 
-  constructor(state: NotificationState, message: string, options: Object = {}) {
-    this.state = state
-    this.message = message
-    this.options = options
-    this.timestamp = new Date()
-    this.dismissed = false
-    this.displayed = false
+  constructor(
+    readonly state: NotificationState = NotificationState.Info,
+    readonly message: string,
+    options: INotificationOptions
+  ) {
+    this.options = options || this.defaultOptions
   }
 
   getState(): NotificationState {
@@ -34,7 +23,7 @@ export default class Notification implements INotification {
     return this.message
   }
 
-  getOptions(): Object {
+  getOptions(): INotificationOptions {
     return this.options
   }
 

@@ -1,9 +1,9 @@
 import {} from 'jest'
 import { NotificationManager } from '../src/index'
 
-const manager = new NotificationManager()
-
 describe('Notification Manager', () => {
+  let manager: NotificationManager = new NotificationManager
+
   afterEach(() => {
     manager.clear()
   })

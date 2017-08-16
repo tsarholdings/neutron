@@ -1,27 +1,33 @@
 import { NotificationState } from './NotificationState'
+import INotificationOptions from './INotificationOptions'
 
 export default interface INotification {
+  /** State of notification */
   readonly state: NotificationState
-  readonly message: string
-  readonly timestamp: Date
-  readonly options: {
-    buttons?: {
-      className?: string
-      text: string
-    }
-    description?: string
-    detail?: string
-    dismissable?: boolean
-    icon?: string
-  }
-  dismissed: boolean
-  displayed: boolean
 
-  getState: () => NotificationState
-  getMessage: () => string
-  getOptions(): Object
-  getTimestamp(): Date
-  isDismissed(): boolean
-  isDismissable(): boolean
-  wasDisplayed(): boolean
+  /** Message */
+  readonly message: string
+
+  /** Timestamp of creation */
+  readonly timestamp: Date
+
+  /** Options object structure */
+  readonly options: INotificationOptions
+
+  /** Default options */
+  readonly defaultOptions: INotificationOptions
+
+  /** Dismissed flag for notification */
+  readonly dismissed: boolean
+
+  /** Displayed flag */
+  readonly displayed: boolean
+
+  readonly getState: () => NotificationState
+  readonly getMessage: () => string
+  readonly getOptions: () => Object
+  readonly getTimestamp: () => Date
+  readonly isDismissed: () => boolean
+  readonly isDismissable: () => boolean
+  readonly wasDisplayed: () => boolean
 }

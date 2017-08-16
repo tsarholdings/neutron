@@ -1,3 +1,4 @@
+/** Possible notification states. */
 export enum NotificationState {
   Success = 'success',
   Info = 'info',

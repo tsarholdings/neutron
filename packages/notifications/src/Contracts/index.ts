@@ -1,3 +1,5 @@
 export { default as INotificationManager } from './INotificationManager'
 export { default as INotification } from './INotification'
+export { default as INotificationOptions } from './INotificationOptions'
+export { default as INotificationButtons } from './INotificationButtons'
 export * from './NotificationState'
