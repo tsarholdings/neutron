@@ -1,5 +1,5 @@
 {
-  "name": "@neutronjs/notification-manager",
+  "name": "@neutronjs/notifications",
   "version": "0.1.0",
   "description": "Notification manager.",
   "keywords": [
