@@ -24,10 +24,6 @@ describe('Notification', () => {
     it('shouldn\'t be dismissed', () => {
       expect(notify.isDismissed()).toBeFalsy()
     })
-    it('should be able to dismiss notification', () => {
-      notify.dismiss()
-      expect(notify.isDismissed()).toBeTruthy()
-    })
   })
   describe('Success', () => {
     const notify = new Notification('success', 'Notify test')
