@@ -1,4 +1,4 @@
-import { INotification, NotificationState } from './NotificationContract'
+import { INotification, NotificationState } from './Contracts'
 
 export default class Notification implements INotification {
   readonly state: NotificationState

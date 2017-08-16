@@ -1,18 +1,14 @@
 import Notification from './Notification'
-import { INotification } from './NotificationContract'
+import { INotification, INotificationManager, NotificationState } from './Contracts'
 
-export default class NotificationManager {
+export default class NotificationManager implements INotificationManager {
 
   /**
    * Managed notifications.
    *
    * @return {Array}
    */
-  notifications: Array<INotification>
-
-  constructor() {
-    this.notifications = []
-  }
+  notifications = []
 
   /**
    * Raise success notification.
@@ -22,7 +18,7 @@ export default class NotificationManager {
    * @return {INotification}
    */
   success(message: string, options: Object): INotification {
-    return this.raise(new Notification('success', message, options))
+    return this.raise(new Notification(NotificationState.Success, message, options))
   }
 
   /**
@@ -33,7 +29,7 @@ export default class NotificationManager {
    * @return {INotification}
    */
   info(message: string, options: Object): INotification {
-    return this.raise(new Notification('info', message, options))
+    return this.raise(new Notification(NotificationState.Info, message, options))
   }
 
   /**
@@ -44,7 +40,7 @@ export default class NotificationManager {
    * @return {INotification}
    */
   warning(message: string, options: Object): INotification {
-    return this.raise(new Notification('warning', message, options))
+    return this.raise(new Notification(NotificationState.Warning, message, options))
   }
 
   /**
@@ -55,7 +51,7 @@ export default class NotificationManager {
    * @return {INotification}
    */
   error(message: string, options: Object): INotification {
-    return this.raise(new Notification('error', message, options))
+    return this.raise(new Notification(NotificationState.Error, message, options))
   }
 
   /**
@@ -66,7 +62,7 @@ export default class NotificationManager {
    * @return {INotification}
    */
   fatal(message: string, options: Object): INotification {
-    return this.raise(new Notification('fatal', message, options))
+    return this.raise(new Notification(NotificationState.Fatal, message, options))
   }
 
   /**

@@ -1,6 +1,6 @@
-export type NotificationState = 'success' | 'info' | 'warning' | 'error' | 'fatal'
+import { NotificationState } from './NotificationState'
 
-export interface INotification {
+export default interface INotification {
   readonly state: NotificationState
   readonly message: string
   readonly timestamp: Date
@@ -17,8 +17,8 @@ export interface INotification {
   dismissed: boolean
   displayed: boolean
 
-  getState(): NotificationState
-  getMessage(): string
+  getState: () => NotificationState
+  getMessage: () => string
   getOptions(): Object
   getTimestamp(): Date
   isDismissed(): boolean
