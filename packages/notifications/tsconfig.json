@@ -17,14 +17,12 @@
     "outDir": "dist",
     "sourceMap": true
   },
-  "files": [
-    "src/index.ts",
-    "src/Notification.ts"
+  "include": [
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "scripts",
-    "acceptance-tests"
+    "coverage"
   ]
 }
