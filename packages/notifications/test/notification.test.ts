@@ -17,12 +17,12 @@ describe('Notification', () => {
     expect(notify.getTimestamp()).toEqual(expect.any(Date))
   })
   it('shouldn\'t be disaplyed', () => {
-      expect(notify.wasDisplayed()).toBeFalsy()
+    expect(notify.wasDisplayed()).toBeFalsy()
   })
   it('shouldn\'t be dismissable', () => {
-      expect(notify.isDismissable()).toBeFalsy()
+    expect(notify.isDismissable()).toBeFalsy()
   })
   it('shouldn\'t be dismissed', () => {
-      expect(notify.isDismissed()).toBeFalsy()
+    expect(notify.isDismissed()).toBeFalsy()
   })
 })
