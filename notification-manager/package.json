@@ -1,0 +1,52 @@
+{
+  "name": "@neutronjs/notification-manager",
+  "version": "0.1.0",
+  "description": "Notification manager.",
+  "keywords": [
+    "tsarholdings",
+    "neutron",
+    "notifications",
+    "manager",
+    "electron"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tsarholdings/neutron.git"
+  },
+  "author": "Tsar Holding Company Pty Ltd",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "compile",
+    "compile": "tsc",
+    "test": "jest --forceExit",
+    "lint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.7",
+    "@types/node": "^8.0.20",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.10",
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/test/**/*.test.(ts|js)"
+    ],
+    "testEnvironment": "node"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es6",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "noImplicitUseStrict": false,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "pretty": true,
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "files": [
+    "src/index.ts",
+    "src/Notification.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "scripts",
+    "acceptance-tests"
+  ]
+}
