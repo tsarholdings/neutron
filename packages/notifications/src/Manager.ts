@@ -1,4 +1,5 @@
-import Notification, { INotification } from './Notification'
+import Notification from './Notification'
+import { INotification } from './NotificationContract'
 
 export default class NotificationManager {
 
