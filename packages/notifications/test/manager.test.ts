@@ -1,5 +1,5 @@
 import {} from 'jest'
-import NotificationManager from '../src/index'
+import { NotificationManager } from '../src/index'
 
 const manager = new NotificationManager()
 

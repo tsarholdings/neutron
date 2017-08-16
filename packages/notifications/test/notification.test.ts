@@ -1,6 +1,6 @@
 import {} from 'jest'
 
-import Notification from '../src/Notification'
+import { Notification } from '../src/index'
 
 describe('Notification', () => {
   const notify = new Notification('info', 'Notify test')
