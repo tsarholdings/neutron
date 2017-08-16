@@ -36,7 +36,7 @@ export default class Notification implements INotification {
   }
 
   isDismissable(): boolean {
-    return !!this.options.dismissable
+    return get(this.options, 'dismissable', false)
   }
 
   wasDisplayed(): boolean {
